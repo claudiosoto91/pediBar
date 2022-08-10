@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PediBar | JS</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <div class="cartel"></div>
+    <div class="volver-arriba">
+        <a href="#header">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-top" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff63b1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M9 20v-8h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v8a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+            </svg>
+        </a>
+
+    </div>
+    <header id="header" class="header">
+        <video src="./videos-bar/video_1_bar.mp4" autoplay="true" muted="true" loop="true" ></video>
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <div class="logo">
+                    <img src="./img-bar/pedibar_logo.png" alt="pedibar-logo">
+                </div>
+                <div class="carrito">
+                    <div class="icono-carrito">
+                        <div class="contar-carrito"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="#ff63b1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <circle cx="6" cy="19" r="2" />
+                            <circle cx="17" cy="19" r="2" />
+                            <path d="M17 17h-11v-14h-2" />
+                            <path d="M6 5l14 1l-1 7h-13" />
+                        </svg>
+                    </div>
+
+                    <div class="ver-carrito">
+                        <div>
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr class="titulos">
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                        <div class="separar-btn">
+                            <a href="#" id="comprar-carrito">Comprar</a>
+                            <a href="#" id="vaciar-carrito">Vaciar Carrito</a>
+                        </div>
+                    </div>
+                </div>
+                <nav id="nav" class="main-nav">
+                    <div class="nav-links">
+                      <a class="link-item" href="index.html">Inicio</a>
+                      <a class="link-item" href="#nosotros">Nosotros</a>
+                      <a class="link-item" href="#bebidas">Bebidas</a>
+                      <a class="link-item" href="#contacto">Contacto</a>
+                    </div>
+                </nav>
+                <button id="button-menu" class="button-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="slogan">
+                <h1>¡Ya! Quédate por diversión</h1>
+                <p>Tiempos de los que nunca te arrepentirás</p>
+            </div>
+        </div>
+    </header>
+    
+    <section id="bebidas" class="bebidas">
+        <h2 class="bebidas-titulo">Favoritos</h2>
+        <div class="tragos-grid contenedor">
+            <div class="trago">
+                <div class="imagen-trago">
+                    <img src="./img-bar/negroni.png" alt="imagen bebida">
+                </div>
+                <div class="info-trago">
+                    <h3>Negroni</h3>
+                </div>
+            </div>
+            <div class="trago">
+                <div class="imagen-trago">
+                    <img src="./img-bar/fernet.png" alt="imagen bebida">
+                </div>
+                <div class="info-trago">
+                    <h3>Fernet</h3>
+                </div>
+            </div>
+            <div class="trago">
+                <div class="imagen-trago">
+                    <img src="./img-bar/cosmopolitan.png" alt="imagen bebida">
+                </div>
+                <div class="info-trago">
+                    <h3>Cosmopolitan</h3>
+                </div>
+            </div>
+            <div class="trago">
+                <div class="imagen-trago">
+                    <img src="./img-bar/mojito.png" alt="imagen bebida">
+                </div>
+                <div class="info-trago">
+                    <h3>Mojito</h3>
+                </div>
+            </div>   
+        </div>
+
+        <h2 class="bebidas-titulo">Bebidas</h2>
+        <div class="boton-tragos">
+            <a href="#">Mostrar Tragos</a>
+        </div>
+        <div class="mostrar-tragos"></div>
+
+        <div class="buscar-bebida buscar-grid">
+            <div class="form-bebida">
+                <div class="label-bebida">
+                    <label for="nombre-bebida">Buscar tu trago</label>
+                </div>
+                <div class="input-bebida">
+                    <input type="text" id="input-bebida" placeholder="Ej: Cosmopolitan">
+                </div>
+                <div class="btn-buscar">
+                    <button type="submit" id="buscarBebida">Buscar</button>
+                </div>
+            </div>
+            <div class="resultado"></div>
+        </div>
+    </section>
+
+    <section id="nosotros" class="nosotros">
+        <div class="contenedor nosotros-grid">
+            <div class="nosotros-imagen">
+                <img src="./img-bar/fondo_2_bar.jpg" alt="imagen de bar">
+            </div>
+            <div class="nosotros-texto">
+                <h2>Nosotros</h2>
+                <p> <span class="nosotros-span">PediBar</span> se encuentra funcionando para toda la comunidad hace ya 10 años.
+                    Siempre brindando el mejor servicios, y la calidad que nos caracteriza.
+                </p>
+                <p>Contamos con gran variedad de tragos con alcohol y sin alcohol.
+                    Podes visitarnos en cualquiera de los 3 locales.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contacto" class="contenedor contacto">
+        <h3>Contacto</h3>
+        <div class="contacto-grid">
+            <div class="imagen-contacto">
+                <img src="./img-bar/img-form.jpg" alt="imagen formulario">
+            </div>
+            <div class="formulario-contacto">
+                <div class="campos">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" placeholder="Tu Nombre">
+                </div>
+                <div class="campos">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="email@email.com">
+                </div>
+                <div class="campos">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Tu Mensaje"></textarea>
+                </div>
+                <button class="btn-form">Enviar</button>
+            </div>
+        </div>
+    </section>
+    <section class="registro">
+        <h3>Registrate y forma parte de la comunidad de PediBar</h3>
+        <div class="registro-grid contenedor">
+            <div class="formulario-grid">
+                <form class="form">
+                    <h2 class="form__title">Inicia Sesión</h2>
+                    <p class="form__paragraph">¿Aún no tienes una cuenta? <a href="#" class="form__link">Entra aquí</a></p>
+            
+                    <div class="form__container">
+                        <div class="form__group">
+                            <input type="text" id="name" class="form__input" placeholder=" ">
+                            <label for="name" class="form__label">Nombre:</label>
+                            <span class="form__line"></span>
+                        </div>
+                        <div class="form__group">
+                            <input type="text" id="user" class="form__input" placeholder=" ">
+                            <label for="user" class="form__label">Usuario:</label>
+                            <span class="form__line"></span>
+                        </div>
+                        <div class="form__group">
+                            <input type="text" id="password" class="form__input" placeholder=" ">
+                            <label for="password" class="form__label">Contraseña:</label>
+                            <span class="form__line"></span>
+                        </div>
+            
+                        <input type="submit" class="form__submit" value="Entrar">
+                    </div>
+                </form>
+            </div>
+            <div class="imagen-registro">
+                <img src="./img-bar/barra_bar.jpg" alt="imagen bar">
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="contenedor footer-grid">
+            <a href="index.html" class="logo-footer">
+                <img src="./img-bar/pedibar_logo.png" alt="imagen logo">
+            </a>
+            <div class="info-footer">
+                <nav class="nav-footer">
+                    <div class="nav-footer">
+                      <a class="enlace-footer" href="index.html">Inicio</a>
+                      <a class="enlace-footer" href="#nosotros">Nosotros</a>
+                      <a class="enlace-footer" href="#bebidas">Bebidas</a>
+                      <a class="enlace-footer" href="#contacto">Contacto</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <p class="copyright-footer">Todos los Derechos Reservados | PediBar | Claudio Soto</p>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/app.js" type="module"></script>
+</body>
+</html>
