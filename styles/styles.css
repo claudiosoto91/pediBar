@@ -356,15 +356,17 @@ video {
 .boton-tragos{
     text-align: center;
 }
-.boton-tragos a{
+.boton-tragos button{
     background-color: var(--rosa);
     color: var(--negro);
     padding: 1rem 2rem;
     border-radius: .5rem;
     font-size: 2rem;
     font-weight: 700;
+    border: none;
+    cursor: pointer;
 }
-.boton-tragos a:hover{
+.boton-tragos button:hover{
     background-color: var(--negro);
     color: var(--rosa);
 }
